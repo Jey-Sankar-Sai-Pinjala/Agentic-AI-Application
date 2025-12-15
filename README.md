@@ -4,7 +4,6 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
 
 ## Architecture
 
-```
 ┌─────────────────────────────────────────────────────────────────┐
 │                         USER INTERFACE                          │
 │                    (HTML/CSS/JS Frontend)                       │
@@ -39,7 +38,6 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
                                │  │ Code Explainer│  │
                                │  └──────────────┘   │
                                └─────────────────────┘
-```
 
 ## Features
 
@@ -101,12 +99,11 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
 ### Setup
 
 1. **Clone or navigate to the project directory**
-   ```bash
+   bash
    cd "ai chatbot"
-   ```
 
 2. **Create virtual environment (recommended)**
-   ```bash
+3. bash
    python -m venv venv
    
    # Windows
@@ -116,24 +113,24 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
    source venv/bin/activate
    ```
 
-3. **Install dependencies**
-   ```bash
+4. **Install dependencies**
+   bash
    pip install fastapi uvicorn google-generativeai openai-whisper faster-whisper pdfplumber pytesseract youtube-transcript-api pillow pydantic python-multipart
-   ```
+   
 
-4. **Set up API key**
+5. **Set up API key**
 
    **Option 1: Create a `.env` file (Recommended)**
-   ```bash
+   bash
    # Copy the example file
    cp .env.example .env
    
    # Then edit .env and add your API key
    GOOGLE_API_KEY=your-api-key-here
-   ```
+   
 
    **Option 2: Set environment variable**
-   ```bash
+   bash
    # Windows PowerShell
    $env:GOOGLE_API_KEY="your-api-key-here"
    
@@ -142,9 +139,8 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
    
    # macOS/Linux
    export GOOGLE_API_KEY="your-api-key-here"
-   ```
 
-5. **Configure Tesseract (if using OCR fallback)**
+6. **Configure Tesseract (if using OCR fallback)**
    - Windows: Add Tesseract to PATH or set `TESSDATA_PREFIX` environment variable
    - The OCR tool will auto-detect if Tesseract is available
 
@@ -153,12 +149,11 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
 1. **Start the FastAPI server**
    ```bash
    python main.py
-   ```
+
    
    Or using uvicorn directly:
-   ```bash
+   bash
    uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-   ```
 
 2. **Open the UI**
    - Navigate to `http://localhost:8000` in your browser
@@ -167,54 +162,52 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
 ## Usage Examples
 
 ### 1. Text Summarization
-```
+
 Input: "Summarize this text: [your text here]"
 Or upload a text file and ask: "Summarize this"
-```
 
 ### 2. Image OCR
-```
+
 Upload an image (JPG/PNG) with text
 Ask: "Extract text from this image"
-```
+
 
 ### 3. PDF Text Extraction
-```
+
 Upload a PDF file
 Ask: "Extract text from this PDF"
-```
+
 
 ### 4. Audio Transcription + Summary
-```
+
 Upload an audio file (MP3/WAV/M4A)
 Ask: "Transcribe and summarize this audio"
-```
+
 
 ### 5. YouTube Transcript
-```
+
 Paste a YouTube URL
 Ask: "Get the transcript" or "Summarize this video"
-```
+
 
 ### 6. Sentiment Analysis
-```
+
 Input: "Analyze the sentiment of: [your text]"
-```
 
 ### 7. Code Explanation
-```
+
 Paste code or upload a code file
 Ask: "Explain this code" or "What does this code do?"
-```
+
 
 ### 8. General Q&A
-```
+
 Ask any question: "What is machine learning?"
-```
+
 
 ## Project Structure
 
-```
+
 .
 ├── app/
 │   ├── agents/
@@ -247,7 +240,7 @@ Ask any question: "What is machine learning?"
 │   ├── sample_text.txt
 │   └── README.md
 └── README.md
-```
+
 
 ## API Endpoints
 
@@ -255,17 +248,17 @@ Ask any question: "What is machine learning?"
 Main chat endpoint for processing requests.
 
 **Request Body:**
-```json
+json
 {
   "message": "Summarize this text",
   "file_path": "/path/to/file.pdf",
   "file_type": "pdf",
   "session_id": "optional-session-id"
 }
-```
+
 
 **Response:**
-```json
+json
 {
   "extracted_content": {...},
   "intent_detection": {...},
@@ -274,19 +267,19 @@ Main chat endpoint for processing requests.
   "timestamp": "...",
   "session_id": "..."
 }
-```
+
 
 ### POST `/upload`
 Upload a file (image/PDF/audio).
 
 **Response:**
-```json
+json
 {
   "file_path": "/tmp/filename.pdf",
   "file_type": "pdf",
   "filename": "filename.pdf"
 }
-```
+
 
 ### GET `/health`
 Health check endpoint.
@@ -294,9 +287,9 @@ Health check endpoint.
 ## Testing
 
 Run tests with pytest:
-```bash
+bash
 pytest tests/
-```
+
 
 ## Explainability
 
@@ -351,5 +344,6 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 
 Built as an academic-grade Agentic AI Application following strict specifications.
 
-#   A g e n t i c - A I - A p p l i c a t i o n  
+#   A g e n t i c - A I - A p p l i c a t i o n 
+ 
  
