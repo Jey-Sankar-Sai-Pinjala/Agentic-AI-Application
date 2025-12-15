@@ -5,40 +5,40 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                         USER INTERFACE                          │
-│                    (HTML/CSS/JS Frontend)                       │
-└────────────────────────────┬────────────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                      FASTAPI BACKEND                            │
-│                         (main.py)                               │
-└────────────────────────────┬────────────────────────────────────┘
-                             │
-                ┌────────────┴────────────┐
-                ▼                         ▼
-    ┌─────────────────────┐    ┌─────────────────────┐
-    │   PLANNER AGENT     │    │   EXECUTOR AGENT    │
-    │  (Intent Analysis)  │───▶│  (Tool Execution)   │
-    └──────────┬──────────┘    └──────────┬──────────┘
-               │                           │
-               │                           │
-               ▼                           ▼
-    ┌─────────────────────┐    ┌─────────────────────┐
-    │   GEMINI TEXT      │    │      TOOLS          │
-    │  (Intent Detection)│    │  ┌──────────────┐   │
-    └─────────────────────┘    │  │ Gemini Text  │   │
-                               │  │ Gemini Vision│   │
-                               │  │ PDF Parser   │   │
-                               │  │ OCR          │   │
-                               │  │ Whisper      │   │
-                               │  │ YouTube      │   │
-                               │  │ Summarizer   │   │
-                               │  │ Sentiment    │   │
-                               │  │ Code Explainer│  │
-                               │  └──────────────┘   │
-                               └─────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                    USER INTERFACE                           │
+│                 (HTML/CSS/JS Frontend)                      │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   FASTAPI BACKEND                           │
+│                      (main.py)                              │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+              ┌────────────┴────────────┐
+              ▼                         ▼
+  ┌──────────────────┐      ┌──────────────────┐
+  │  PLANNER AGENT   │      │  EXECUTOR AGENT  │
+  │ (Intent Analysis)│─────▶│(Tool Execution)  │
+  └────────┬─────────┘      └────────┬─────────┘
+           │                         │
+           │                         │
+           ▼                         ▼
+  ┌──────────────────┐      ┌──────────────────┐
+  │   GEMINI TEXT    │      │      TOOLS       │
+  │(Intent Detection)│      │ ┌──────────────┐  │
+  └──────────────────┘      │ │ Gemini Text  │  │
+                            │ │ Gemini Vision│  │
+                            │ │ PDF Parser   │  │
+                            │ │ OCR          │  │
+                            │ │ Whisper      │  │
+                            │ │ YouTube      │  │
+                            │ │ Summarizer   │  │
+                            │ │ Sentiment    │  │
+                            │ │ Code Explainer│ │
+                            │ └──────────────┘  │
+                            └──────────────────┘
 ```
 
 ## Features
@@ -350,6 +350,3 @@ Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for gui
 ## Author
 
 Built as an academic-grade Agentic AI Application following strict specifications.
-
-#   A g e n t i c - A I - A p p l i c a t i o n  
- 
