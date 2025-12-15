@@ -118,7 +118,7 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
 
 3. **Install dependencies**
    ```bash
-   pip install fastapi uvicorn google-generativeai openai-whisper faster-whisper pdfplumber pytesseract youtube-transcript-api pillow pydantic python-multipart
+   pip install -r requirements.txt
    ```
 
 4. **Set up API key**
@@ -228,14 +228,16 @@ Ask any question: "What is machine learning?"
 │   │   ├── pdf_parser.py        # PDF text extraction
 │   │   ├── ocr.py               # OCR fallback
 │   │   ├── audio_whisper.py     # Audio transcription
-│   │   ├── youtube.py            # YouTube transcripts
+│   │   ├── youtube.py           # YouTube transcripts
 │   │   ├── summarizer.py        # Text summarization
 │   │   ├── sentiment.py         # Sentiment analysis
 │   │   └── code_explainer.py    # Code explanation
 │   ├── schemas/
 │   │   ├── __init__.py
 │   │   └── models.py             # Pydantic models
-│   └── main.py                   # FastAPI application
+│   ├── config.py                 # Configuration
+│   ├── main.py                   # FastAPI application
+│   └── session_manager.py        # Session management
 ├── ui/
 │   └── index.html                # Frontend UI
 ├── tests/
@@ -246,6 +248,10 @@ Ask any question: "What is machine learning?"
 │   ├── sample_code.py
 │   ├── sample_text.txt
 │   └── README.md
+├── main.py                        # Entry point
+├── requirements.txt
+├── .env.example
+├── .gitignore
 └── README.md
 ```
 
@@ -325,7 +331,7 @@ Every request returns:
 
 ### "GOOGLE_API_KEY not found"
 - Set the `GOOGLE_API_KEY` environment variable
-- Or pass it when initializing tools
+- Or create a `.env` file with your API key
 
 ### OCR not working
 - Install Tesseract OCR
