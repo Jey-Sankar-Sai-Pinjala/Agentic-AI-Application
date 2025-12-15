@@ -353,14 +353,3 @@ Every request returns:
 - Ensure `pdfplumber` is installed
 - For scanned PDFs, OCR fallback will be used automatically
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## Author
-
-Built as an academic-grade Agentic AI Application following strict specifications.
