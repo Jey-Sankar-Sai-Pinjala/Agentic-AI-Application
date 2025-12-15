@@ -1,0 +1,23 @@
+This is a sample text file for testing the Agentic AI Application.
+
+The application is designed to handle various types of inputs including:
+- Raw text
+- Images with text (OCR)
+- PDF documents
+- Audio files
+- YouTube URLs
+
+The system uses a two-agent architecture:
+1. Planner Agent: Analyzes user intent and decides on execution
+2. Executor Agent: Executes the planned tasks using appropriate tools
+
+Key features include:
+- Intent detection and ambiguity handling
+- Automatic content extraction
+- Summarization in multiple formats
+- Sentiment analysis
+- Code explanation and bug detection
+- Robust error handling and fallback mechanisms
+
+This text can be used to test summarization, sentiment analysis, and other text processing features.
+
