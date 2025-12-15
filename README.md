@@ -7,6 +7,8 @@ Academic-grade Agentic AI Application with Planner and Executor agents, built wi
 Watch the demo video to see the application in action:
 - [Demo Video](agentic%20ai.mp4) - Full demonstration of all features
 
+> **Note:** The demo video file (`agentic ai.mp4`) is included in the repository. Click the link above or download it directly to view.
+
 ## Architecture
 
 ```
