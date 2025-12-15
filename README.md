@@ -2,6 +2,11 @@
 
 Academic-grade Agentic AI Application with Planner and Executor agents, built with FastAPI and Google Gemini.
 
+## Demo
+
+Watch the demo video to see the application in action:
+- [Demo Video](agentic%20ai.mp4) - Full demonstration of all features
+
 ## Architecture
 
 ```
@@ -252,6 +257,7 @@ Ask any question: "What is machine learning?"
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
+├── agentic ai.mp4                 # Demo video
 └── README.md
 ```
 
